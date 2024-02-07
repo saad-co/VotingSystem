@@ -14,6 +14,7 @@ namespace VotingSystem
         public int CandidateID
         {
             get { return candidateID; }
+            set { candidateID = value; }
         }
 
         private string name;

@@ -55,7 +55,14 @@ namespace VotingSystem
                     using (SqlDataReader dr = cmd.ExecuteReader())
                     {
                         // Check if any rows exist
-                        return dr.HasRows;
+                        if (dr[2] == null)
+                        {
+                            return false;
+                        }
+                        else
+                        {
+                            return true;
+                        }
                     }
                 }
             }

@@ -11,8 +11,9 @@ namespace VotingSystem
     {
         static void Main(string[] args)
         {
+            Candidate c = new Candidate("nawaz shareef", "PMLN");
             VotingMachine machine = new VotingMachine();
-            machine.addVote();
+            machine.displayCandidates();
         }
     }
 }
