@@ -37,6 +37,7 @@ namespace VotingSystem
 
         public int Votes
         {
+            set { votes = value; }
             get { return votes; }
         }
 
@@ -56,6 +57,14 @@ namespace VotingSystem
             this.Name = name;
             this.party = party;
             this.votes = 0;
+            this.candidateID = GenerateCandidateID();
+        }
+
+        public Candidate()
+        {
+            this.votes = 0;
+            this.party = string.Empty;
+            this.name = string.Empty;
             this.candidateID = GenerateCandidateID();
         }
 
